@@ -147,6 +147,75 @@
           <figcaption>The same pipeline supports continuous benchmark construction as fresh scam sites and campaigns appear.</figcaption>
         </figure>
       </div>
+      <div class="pipeline-scene">
+        <div class="pipeline-intro">
+          <p class="eyebrow">How it works</p>
+          <h3>A continuous pipeline from scam-site seeds to developer-style benchmark prompts</h3>
+          <p>
+            The framework is designed to be repeatable: as new scam URLs are added to public
+            blocklists, Scam2Prompt can crawl accessible pages, synthesize programming prompts,
+            run code-generation LLMs, extract generated endpoints, and validate the resulting
+            prompt-code pairs.
+          </p>
+          <div class="inline-links">
+            <a href="assets/scam2prompt-preprint.pdf#page=6">Read framework section</a>
+            <a href="assets/scam2prompt-preprint.pdf#page=16">Read dataset construction</a>
+          </div>
+        </div>
+        <div class="pipeline-steps" aria-label="Expandable Scam2Prompt pipeline steps">
+          <details open>
+            <summary><span>1</span><strong>Collect scam-site seeds</strong></summary>
+            <p>
+              Scam2Prompt starts from established malicious URL databases, including MetaMask's
+              <code>eth-phishing-detect</code> and PhishFort lists. In the paper, these sources
+              contain hundreds of thousands of URLs; the pipeline filters them to pages that are
+              still accessible and serve static content.
+            </p>
+          </details>
+          <details>
+            <summary><span>2</span><strong>Safely extract visible content</strong></summary>
+            <p>
+              The crawler minimizes exposure to malicious pages by using lightweight HEAD requests,
+              strict timeouts, URL validation, and text-only GET requests. It rejects binary content,
+              strips CSS and JavaScript, and keeps the visible text that captures the scam site's
+              topic, product framing, and keywords.
+            </p>
+          </details>
+          <details>
+            <summary><span>3</span><strong>Synthesize developer-style prompts</strong></summary>
+            <p>
+              A prompt-generation LLM receives the cleaned page text and creates concise programming
+              tasks involving code generation, APIs, libraries, or automation. The prompts preserve
+              page-specific terms so they can stress-test whether an LLM associates those themes with
+              malicious infrastructure.
+            </p>
+          </details>
+          <details>
+            <summary><span>4</span><strong>Generate code and extract URLs</strong></summary>
+            <p>
+              A code-generation LLM answers each synthesized prompt. Scam2Prompt then extracts every
+              endpoint embedded in the generated code, producing candidate prompt-code pairs that can
+              be checked for malicious URLs.
+            </p>
+          </details>
+          <details>
+            <summary><span>5</span><strong>Validate generated endpoints</strong></summary>
+            <p>
+              The URL oracle combines independent detectors, including ChainPatrol, Google Safe
+              Browsing, and SecLookup. A generated URL is treated as malicious if any detector flags
+              it. URLs not already present in the seed databases can be reported back to maintainers.
+            </p>
+          </details>
+          <details>
+            <summary><span>6</span><strong>Curate the benchmark</strong></summary>
+            <p>
+              The final benchmark keeps prompts that are developer-style code-generation requests,
+              not jailbreaks or non-coding questions. Human validation filters out summarization and
+              manual workflow prompts, yielding 1,377 reusable prompts for testing newer LLMs.
+            </p>
+          </details>
+        </div>
+      </div>
     </section>
 
     <section class="section">
