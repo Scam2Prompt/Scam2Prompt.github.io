@@ -191,12 +191,19 @@ h3 {
 }
 
 .authors-label {
-  margin: 0 0 10px;
+  margin: 0 0 4px;
   color: var(--accent);
   font-size: 12px;
   font-weight: 850;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.affiliation-label {
+  margin: 0 0 12px;
+  color: #405c53;
+  font-size: 14px;
+  font-weight: 760;
 }
 
 .authors {
@@ -234,6 +241,7 @@ h3 {
   font-weight: 820;
 }
 
+.authors span span,
 .authors a span {
   margin-top: 5px;
   color: var(--accent);
@@ -241,6 +249,10 @@ h3 {
   font-weight: 850;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.authors a span + span {
+  color: #5c746c;
 }
 
 .cta-row,
