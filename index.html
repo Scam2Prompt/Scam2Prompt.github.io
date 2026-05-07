@@ -55,12 +55,15 @@
             <p>The generated URLs are not just copied from seeds; 62 were verified and added by MetaMask maintainers.</p>
           </a>
         </div>
-        <div class="authors" aria-label="Authors">
-          <a href="https://jeffchen006.github.io">Zhiyang Chen</a>
-          <span>Tara Saba</span>
-          <span>Xun Deng</span>
-          <a href="https://www.cs.utoronto.ca/~six/">Xujie Si</a>
-          <a href="https://www.cs.utoronto.ca/~fanl/">Fan Long</a>
+        <div class="authors-block" aria-label="Authors">
+          <p class="authors-label">Authors</p>
+          <div class="authors">
+            <a href="https://jeffchen006.github.io"><strong>Zhiyang Chen</strong><span>profile</span></a>
+            <span><strong>Tara Saba</strong></span>
+            <span><strong>Xun Deng</strong></span>
+            <a href="https://www.cs.utoronto.ca/~six/"><strong>Xujie Si</strong><span>profile</span></a>
+            <a href="https://www.cs.utoronto.ca/~fanl/"><strong>Fan Long</strong><span>profile</span></a>
+          </div>
         </div>
         <div class="cta-row" aria-label="Primary resources">
           <a class="button primary" href="assets/scam2prompt-preprint.pdf">Preprint PDF</a>
@@ -200,6 +203,47 @@
             <tr><td>DeepSeek Chat v3.1</td><td>1,358</td><td>12</td><td>651</td><td>47.3%</td></tr>
           </tbody>
         </table>
+      </div>
+      <div class="filter-analysis">
+        <div class="filter-copy">
+          <p class="eyebrow">Guardrails, filtering, and rankings</p>
+          <h3>Content filters change the apparent safety ranking</h3>
+          <p>
+            The table above is filter-aware: outputs blocked by a model's internal
+            safety filter or guardrail are counted as non-malicious. This matters because
+            Gemini 2.5 Pro filtered 553 of 1,377 prompts, while GPT-5 filtered only 24.
+            In the appendix, we also remove this filter effect by comparing only the
+            637 prompts completed by all seven models.
+          </p>
+          <p>
+            We report 95% Wald confidence intervals and paired McNemar tests. The result is
+            best read as statistical tiers, not a single universal ordering.
+          </p>
+          <div class="inline-links">
+            <a href="assets/scam2prompt-preprint.pdf#page=20">Read appendix analysis</a>
+            <a href="assets/scam2prompt-preprint.pdf#page=22">Shared-completion ranking</a>
+          </div>
+        </div>
+        <div class="tier-grid" aria-label="Statistical ranking tiers">
+          <article class="tier-card">
+            <span>Filter-aware</span>
+            <h4>All 1,377 prompts</h4>
+            <ol>
+              <li><strong>Lower malicious-rate tier:</strong> Gemini 2.5 Pro, GPT-5</li>
+              <li><strong>Middle tier:</strong> Claude Sonnet 4</li>
+              <li><strong>High-risk cluster:</strong> Grok Code Fast 1, Gemini 2.5 Flash, Qwen3 Coder, DeepSeek Chat v3.1</li>
+            </ol>
+          </article>
+          <article class="tier-card">
+            <span>Filter removed</span>
+            <h4>637 shared completions</h4>
+            <ol>
+              <li><strong>Statistical tie:</strong> Gemini 2.5 Pro and GPT-5</li>
+              <li><strong>Middle:</strong> Claude Sonnet 4</li>
+              <li><strong>Lower cluster:</strong> remaining models mostly overlap under McNemar tests</li>
+            </ol>
+          </article>
+        </div>
       </div>
       <div class="resource-card">
         <h3>Download the benchmark</h3>
