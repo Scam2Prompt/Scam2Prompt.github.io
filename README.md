@@ -1,0 +1,1 @@
+# Scam2Prompt.github.io
