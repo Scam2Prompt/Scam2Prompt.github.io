@@ -386,52 +386,65 @@ figcaption {
 
 .pipeline-scene {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 24px;
-  margin-top: 22px;
-  padding: 24px;
-  background: #f7faf7;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  box-shadow: 0 12px 34px rgba(20, 35, 30, 0.06);
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+  gap: 34px;
+  margin-top: 34px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
 }
 
 .pipeline-intro h3 {
   margin: 8px 0 14px;
-  font-size: clamp(24px, 3vw, 34px);
-  line-height: 1.12;
+  max-width: 520px;
+  font-size: clamp(23px, 2.7vw, 31px);
+  line-height: 1.16;
 }
 
 .pipeline-intro p {
   margin: 0;
+  max-width: 510px;
   color: var(--muted);
   font-size: 16px;
 }
 
+.pipeline-intro .inline-links {
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.pipeline-intro .inline-links a {
+  min-height: 36px;
+  padding: 8px 12px;
+  font-size: 14px;
+  box-shadow: none;
+}
+
 .pipeline-steps {
   display: grid;
-  gap: 10px;
+  gap: 0;
+  border-top: 1px solid var(--line);
 }
 
 .pipeline-steps details {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(20, 35, 30, 0.05);
+  position: relative;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  box-shadow: none;
   overflow: hidden;
 }
 
 .pipeline-steps details[open] {
-  border-color: rgba(45, 124, 95, 0.38);
-  background: #fbfdfb;
+  background: linear-gradient(90deg, rgba(45, 124, 95, 0.07), rgba(45, 124, 95, 0));
 }
 
 .pipeline-steps summary {
   display: grid;
-  grid-template-columns: 32px 1fr;
+  grid-template-columns: 32px 1fr 22px;
   align-items: center;
-  gap: 12px;
-  padding: 14px 16px;
+  gap: 14px;
+  padding: 16px 0;
   cursor: pointer;
   list-style: none;
 }
@@ -440,9 +453,25 @@ figcaption {
   display: none;
 }
 
+.pipeline-steps summary::after {
+  content: "+";
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-weight: 850;
+  font-size: 17px;
+}
+
+.pipeline-steps details[open] summary::after {
+  content: "-";
+}
+
 .pipeline-steps summary span {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -461,13 +490,16 @@ figcaption {
 .pipeline-steps summary strong {
   color: var(--ink);
   font-size: 16px;
+  line-height: 1.2;
 }
 
 .pipeline-steps details p {
   margin: 0;
-  padding: 0 16px 16px 60px;
+  max-width: 680px;
+  padding: 0 28px 20px 46px;
   color: var(--muted);
   font-size: 15px;
+  line-height: 1.65;
 }
 
 .finding,
@@ -838,12 +870,15 @@ code {
   }
 
   .pipeline-scene {
-    padding: 18px;
+    gap: 22px;
+    margin-top: 28px;
+    padding-top: 24px;
   }
 
   .pipeline-steps summary {
-    grid-template-columns: 28px 1fr;
-    padding: 13px 14px;
+    grid-template-columns: 28px 1fr 20px;
+    gap: 11px;
+    padding: 14px 0;
   }
 
   .pipeline-steps summary span {
@@ -852,7 +887,9 @@ code {
   }
 
   .pipeline-steps details p {
-    padding: 0 14px 14px 54px;
+    padding: 0 0 16px 39px;
+    font-size: 14.5px;
+    line-height: 1.6;
   }
 
   .footer {
