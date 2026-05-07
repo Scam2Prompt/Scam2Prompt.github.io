@@ -26,12 +26,13 @@
       <div class="hero-copy">
         <p class="eyebrow">ICML 2026</p>
         <h1>Scam2Prompt</h1>
-        <p class="subtitle">Scam websites can seed prompts that make production LLMs generate malicious URLs in code.</p>
+        <p class="subtitle">A continuous pipeline for building developer-style benchmarks that trigger LLMs to generate malicious code containing scam URLs.</p>
         <p class="summary">
           Starting from real scam websites, Scam2Prompt extracts scam-related intent and sensitive
-          keywords, turns them into ordinary developer-style prompts, and tests whether LLMs produce
-          code that points to malicious infrastructure. Large-scale testing shows this is a
-          non-negligible problem, and the benchmark can be continuously rebuilt as new scam sites appear.
+          keywords, transforms them into ordinary developer-style prompts, and uses those prompts
+          to test whether LLMs generate code that points to malicious infrastructure. Large-scale
+          testing shows this is a non-negligible problem, and the benchmark can be continuously
+          rebuilt as new scam sites appear.
         </p>
         <div class="story-chain" aria-label="Scam2Prompt story at a glance">
           <a class="story-step" href="#paper">
@@ -41,13 +42,13 @@
           </a>
           <a class="story-step" href="#framework">
             <span>2</span>
-            <strong>Automated prompt construction</strong>
-            <p>The pipeline converts those signals into developer prompts that can be regenerated as new scams are found.</p>
+            <strong>Continuous benchmark construction</strong>
+            <p>The pipeline converts those signals into developer-style prompts and can regenerate benchmarks as new scams are found.</p>
           </a>
           <a class="story-step" href="#benchmark">
             <span>3</span>
-            <strong>Latest LLMs still fail</strong>
-            <p>Innoc2Scam-bench measures whether recent production LLMs generate malicious URLs in code.</p>
+            <strong>Latest LLMs are stress-tested</strong>
+            <p>Innoc2Scam-bench tests whether recent production LLMs generate malicious code containing scam URLs.</p>
           </a>
           <a class="story-step" href="#verified-reports">
             <span>4</span>
@@ -81,7 +82,7 @@
         </div>
         <div class="metric">
           <span class="metric-value">1,377</span>
-          <span class="metric-label">developer-style prompts built from scam-site seeds for current LLM testing</span>
+          <span class="metric-label">developer-style benchmark prompts produced by the continuous construction pipeline</span>
         </div>
         <div class="metric">
           <span class="metric-value">12.9%-47.3%</span>
