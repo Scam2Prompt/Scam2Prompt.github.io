@@ -351,6 +351,7 @@ figcaption {
 
 .finding,
 .resource-card,
+.preprint-note,
 .impact-panel,
 .resources a {
   background: var(--paper);
@@ -416,6 +417,16 @@ td:last-child {
 }
 
 .resource-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.preprint-note {
+  margin-top: 26px;
+  padding: 22px;
+}
+
+.preprint-note p {
   margin: 0;
   color: var(--muted);
 }
