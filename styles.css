@@ -133,6 +133,59 @@ h3 {
   font-size: 18px;
 }
 
+.story-chain {
+  max-width: 820px;
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.story-step {
+  min-height: 150px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  column-gap: 12px;
+  align-content: start;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(20, 35, 30, 0.06);
+}
+
+.story-step:hover {
+  border-color: rgba(15, 118, 110, 0.45);
+  background: var(--accent-soft);
+}
+
+.story-step span {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #10241f;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 850;
+}
+
+.story-step strong {
+  color: #1d342c;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.story-step p {
+  grid-column: 2;
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
 .authors {
   display: flex;
   flex-wrap: wrap;
@@ -547,7 +600,8 @@ code {
 
   .finding-grid,
   .figure-grid,
-  .resources {
+  .resources,
+  .story-chain {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -572,8 +626,13 @@ code {
 
   .finding-grid,
   .figure-grid,
-  .resources {
+  .resources,
+  .story-chain {
     grid-template-columns: 1fr;
+  }
+
+  .story-step {
+    min-height: auto;
   }
 
   .issue-grid {
