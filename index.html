@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Scam2Prompt: A scalable framework for auditing malicious scam endpoints in production LLMs.">
+  <meta name="description" content="Scam2Prompt: a continuous framework and benchmark for auditing malicious scam endpoints in production LLMs.">
   <title>Scam2Prompt</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -26,34 +26,34 @@
       <div class="hero-copy">
         <p class="eyebrow">ICML 2026</p>
         <h1>Scam2Prompt</h1>
-        <p class="subtitle">A continuous pipeline for building developer-style benchmarks that trigger LLMs to generate malicious code containing scam URLs.</p>
+        <p class="subtitle">A continuous pipeline for constructing developer-style benchmarks that elicit LLM-generated code containing scam URLs.</p>
         <p class="summary">
           Starting from real scam websites, Scam2Prompt extracts scam-related intent and sensitive
-          keywords, transforms them into ordinary developer-style prompts, and uses those prompts
-          to test whether LLMs generate code that points to malicious infrastructure. Large-scale
-          testing shows this is a non-negligible problem, and the benchmark can be continuously
-          rebuilt as new scam sites appear.
+          keywords, transforms them into ordinary developer-style prompts, and uses the resulting
+          benchmark to evaluate whether LLMs generate code that points to malicious infrastructure.
+          Large-scale experiments show that this behavior remains a non-negligible risk in recent
+          production LLMs, while the benchmark can be rebuilt as new scam sites are discovered.
         </p>
         <div class="story-chain" aria-label="Scam2Prompt story at a glance">
           <a class="story-step" href="#paper">
             <span>1</span>
-            <strong>Real scam sites reveal trigger themes</strong>
-            <p>Seed sites expose scam intent around topics such as crypto, trading, copyright, and celebrity coins.</p>
+            <strong>Scam sites provide seed intent</strong>
+            <p>Seed pages expose scam-associated themes involving crypto, trading, copyright, and celebrity coins.</p>
           </a>
           <a class="story-step" href="#framework">
             <span>2</span>
             <strong>Continuous benchmark construction</strong>
-            <p>The pipeline converts those signals into developer-style prompts and can regenerate benchmarks as new scams are found.</p>
+            <p>The pipeline converts these signals into developer-style prompts and supports benchmark regeneration as new scams appear.</p>
           </a>
           <a class="story-step" href="#benchmark">
             <span>3</span>
-            <strong>Latest LLMs are stress-tested</strong>
-            <p>Innoc2Scam-bench tests whether recent production LLMs generate malicious code containing scam URLs.</p>
+            <strong>Production LLMs are evaluated</strong>
+            <p>Innoc2Scam-bench measures whether recent production LLMs generate code containing malicious scam URLs.</p>
           </a>
           <a class="story-step" href="#verified-reports">
             <span>4</span>
-            <strong>New real-world scam URLs</strong>
-            <p>The generated URLs are not just copied from seeds; 62 were verified and added by MetaMask maintainers.</p>
+            <strong>New scam URLs are verified</strong>
+            <p>The generated URLs are not merely copied from seeds; 62 were verified and added by MetaMask maintainers.</p>
           </a>
         </div>
         <div class="authors-block" aria-label="Authors">
@@ -82,7 +82,7 @@
         </div>
         <div class="metric">
           <span class="metric-value">1,377</span>
-          <span class="metric-label">developer-style benchmark prompts produced by the continuous construction pipeline</span>
+          <span class="metric-label">developer-style benchmark prompts produced by the continuous benchmark construction pipeline</span>
         </div>
         <div class="metric">
           <span class="metric-value">12.9%-47.3%</span>
@@ -98,18 +98,18 @@
     <section id="paper" class="section split-section">
       <div>
         <p class="eyebrow">Problem</p>
-        <h2>A real-world example exposed a broader LLM safety risk</h2>
+        <h2>A real-world observation revealed a broader LLM safety risk</h2>
       </div>
       <div class="text-block">
         <p>
           The motivating observation is concrete: scam websites contain phrases, product names, and
           monetization themes that are highly associated with malicious campaigns. When those signals
-          are transformed into normal-looking programming tasks, production LLMs may generate code that
+          are transformed into ordinary programming tasks, production LLMs may generate code that
           embeds malicious URLs.
         </p>
         <p>
           The generated URL does not need to be the original seed URL from the scam database. A seed
-          page can instead act as a keyword and intent source: topics such as Trump coin, Bitcoin,
+          page can instead serve as a keyword and intent source: topics such as Trump coin, Bitcoin,
           wash trading, laundry, stock trading, or copyright can trigger LLMs to produce different
           scam URLs inside code. Scam2Prompt measures that behavior at scale.
         </p>
@@ -132,9 +132,9 @@
         <p class="eyebrow">Framework</p>
         <h2>Continuously turning newly found scam sites into benchmark prompts</h2>
         <p>
-          Scam2Prompt is an automated construction pipeline. When new scam websites are discovered,
-          the system can extract their malicious intent, generate developer-style prompts, run LLMs,
-          and validate whether generated code contains malicious URLs.
+          Scam2Prompt is an automated benchmark construction pipeline. When new scam websites are
+          discovered, the system extracts scam-related intent, generates developer-style prompts,
+          queries LLMs, and validates whether generated code contains malicious URLs.
         </p>
       </div>
       <div class="figure-grid">
@@ -144,17 +144,17 @@
         </figure>
         <figure>
           <img src="assets/dataset-construction.png" alt="Innoc2Scam-bench construction workflow">
-          <figcaption>The same pipeline supports continuous benchmark construction as fresh scam sites and campaigns appear.</figcaption>
+          <figcaption>The same pipeline supports continuous benchmark construction as new scam sites and campaigns appear.</figcaption>
         </figure>
       </div>
       <div class="pipeline-scene">
         <div class="pipeline-intro">
-          <p class="eyebrow">How it works</p>
+          <p class="eyebrow">Pipeline</p>
           <h3>A continuous pipeline from scam-site seeds to developer-style benchmark prompts</h3>
           <p>
-            The framework is designed to be repeatable: as new scam URLs are added to public
-            blocklists, Scam2Prompt can crawl accessible pages, synthesize programming prompts,
-            run code-generation LLMs, extract generated endpoints, and validate the resulting
+            The framework is repeatable: as new scam URLs are added to public blocklists,
+            Scam2Prompt crawls accessible pages, synthesizes programming prompts, queries
+            code-generation LLMs, extracts generated endpoints, and validates the resulting
             prompt-code pairs.
           </p>
           <div class="inline-links">
@@ -221,17 +221,17 @@
     <section class="section">
       <div class="section-heading">
         <p class="eyebrow">Main findings</p>
-        <h2>Production LLMs can emit scam URLs at reproducible rates</h2>
+        <h2>Production LLMs generate scam URLs at reproducible rates</h2>
       </div>
       <div class="finding-grid">
         <article class="finding">
           <h3>Large-scale evidence</h3>
-          <p>Across more than 265,000 generated programs, Scam2Prompt found malicious URL generation in every tested model combination.</p>
+          <p>Across more than 265,000 generated programs, Scam2Prompt observed malicious URL generation in every tested model combination.</p>
           <strong>Average rate: 4.24%</strong>
         </article>
         <article class="finding">
           <h3>Continuous benchmark</h3>
-          <p>Innoc2Scam-bench packages scam-seeded developer prompts so newer production LLMs can be re-tested as models change.</p>
+          <p>Innoc2Scam-bench packages scam-seeded developer prompts so newer production LLMs can be evaluated as models change.</p>
           <strong>1,377 prompts</strong>
         </article>
         <article class="finding">
@@ -245,11 +245,11 @@
     <section id="benchmark" class="section table-section">
       <div class="section-heading">
         <p class="eyebrow">Innoc2Scam-bench</p>
-        <h2>Seven 2025 production LLMs evaluated on the current benchmark</h2>
+        <h2>Seven 2025 production LLMs evaluated with Innoc2Scam-bench</h2>
         <p>
           The current benchmark contains 342 category-1 prompts that explicitly mention a scam URL or domain,
           and 1,035 category-2 prompts that do not. These prompts test whether scam-site-derived
-          intent can still elicit malicious URL generation from recent models.
+          intent can elicit malicious URL generation from recent models.
         </p>
       </div>
       <div class="table-wrap">
@@ -291,7 +291,7 @@
           </p>
           <p>
             We report 95% Wald confidence intervals and paired McNemar tests. The result is
-            best read as statistical tiers, not a single universal ordering.
+            best interpreted as statistical tiers rather than a single universal ordering.
           </p>
           <div class="inline-links">
             <a href="assets/scam2prompt-preprint.pdf#page=20">Read appendix analysis</a>
@@ -333,10 +333,10 @@
     <section id="verified-reports" class="section verified-section">
       <div class="section-heading">
         <p class="eyebrow">Practical impact</p>
-        <h2>LLM-generated code exposed new scam URLs missing from the seed databases</h2>
+        <h2>LLM-generated code surfaced new scam URLs absent from the seed databases</h2>
         <p>
-          Scam2Prompt did not only reproduce known scam infrastructure. The seed websites often act
-          as sources of sensitive scam intent; the LLM may then generate different malicious URLs
+          Scam2Prompt does not only reproduce known scam infrastructure. Seed websites can act as
+          sources of scam-related intent, after which an LLM may generate different malicious URLs
           inside code. We reported newly surfaced URLs to MetaMask's <code>eth-phishing-detect</code>
           maintainers; they verified and added 62 entries to the scam database.
         </p>
@@ -396,9 +396,9 @@
       </div>
       <div class="text-block">
         <p>
-          The artifact contains the end-to-end pipeline: scam database inputs, webpage browsing and caching,
-          automated prompt generation from scam-site intent, code generation, malicious URL oracles,
-          validation of newer LLMs, and reporting.
+          The artifact contains the end-to-end pipeline: scam database inputs, webpage crawling and
+          caching, automated prompt generation from scam-site intent, code generation, malicious URL
+          oracles, evaluation of newer LLMs, and reporting.
         </p>
         <div class="inline-links">
           <a href="https://github.com/Scam2Prompt/Scam2Prompt">GitHub artifact</a>
