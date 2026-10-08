@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title data-i18n="title.budget">Token Budget · Scam2Prompt</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html#top">Scam2Prompt</a>
+      <div class="nav-links">
+        <a href="index.html#paper" data-i18n="nav.paper">Paper</a>
+        <a href="index.html#benchmark" data-i18n="nav.benchmark">Benchmark</a>
+        <a href="task-completion.html" data-i18n="nav.task">Task completion</a>
+        <a href="index.html#artifact" data-i18n="nav.artifact">Artifact</a>
+        <a href="index.html#verified-reports" data-i18n="nav.verified">Verified reports</a>
+        <a href="index.html#resources" data-i18n="nav.resources">Resources</a>
+        <button class="lang-toggle" type="button" lang="zh-CN">中文</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="section table-section completion-section">
+      <div class="section-heading">
+        <h2 data-i18n="tb.h2">Completion by token budget</h2>
+      </div>
+      <div class="table-wrap">
+        <table class="completion-table budget-table">
+          <thead>
+            <tr>
+              <th data-i18n="tc.th.model">Model</th>
+              <th data-i18n="tb.th.budget">Max tokens</th>
+              <th data-i18n="tb.th.n">Outputs</th>
+              <th data-i18n="tc.th.complete">Complete</th>
+              <th data-i18n="tb.th.trunc">Truncated</th>
+              <th data-i18n="tc.th.mal">Malicious</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="group-first"><td rowspan="2">Gemini 2.5 Pro</td><td>20,000</td><td>199</td><td>86 <small>43%</small></td><td>0 <small>0%</small></td><td>33 <small>17%</small></td></tr>
+            <tr><td>2,000</td><td>1,178</td><td>7 <small>1%</small></td><td>1,165 <small>99%</small></td><td>145 <small>12%</small></td></tr>
+            <tr class="group-first"><td rowspan="2">GPT-5</td><td>20,000</td><td>436</td><td>277 <small>64%</small></td><td>4 <small>1%</small></td><td>49 <small>11%</small></td></tr>
+            <tr><td>2,000</td><td>941</td><td>0 <small>0%</small></td><td>905 <small>96%</small></td><td>254 <small>27%</small></td></tr>
+            <tr class="group-first"><td rowspan="2">Claude Sonnet 4</td><td>20,000</td><td>173</td><td>137 <small>79%</small></td><td>0 <small>0%</small></td><td>67 <small>39%</small></td></tr>
+            <tr><td>2,000</td><td>1,204</td><td>74 <small>6%</small></td><td>1,002 <small>83%</small></td><td>405 <small>34%</small></td></tr>
+            <tr class="group-first"><td rowspan="2">Grok Code Fast 1</td><td>20,000</td><td>20</td><td>11 <small>55%</small></td><td>0 <small>0%</small></td><td>8 <small>40%</small></td></tr>
+            <tr><td>2,000</td><td>1,357</td><td>1,074 <small>79%</small></td><td>132 <small>10%</small></td><td>589 <small>43%</small></td></tr>
+            <tr class="group-first"><td rowspan="2">Gemini 2.5 Flash</td><td>20,000</td><td>236</td><td>176 <small>75%</small></td><td>1 <small>0%</small></td><td>99 <small>42%</small></td></tr>
+            <tr><td>2,000</td><td>1,141</td><td>376 <small>33%</small></td><td>764 <small>67%</small></td><td>513 <small>45%</small></td></tr>
+            <tr class="group-first"><td rowspan="2">Qwen3 Coder</td><td>20,000</td><td>91</td><td>60 <small>66%</small></td><td>0 <small>0%</small></td><td>34 <small>37%</small></td></tr>
+            <tr><td>2,000</td><td>1,286</td><td>741 <small>58%</small></td><td>496 <small>39%</small></td><td>594 <small>46%</small></td></tr>
+            <tr class="group-first"><td rowspan="2">DeepSeek Chat v3.1</td><td>20,000</td><td>24</td><td>16 <small>67%</small></td><td>0 <small>0%</small></td><td>8 <small>33%</small></td></tr>
+            <tr><td>2,000</td><td>1,353</td><td>1,077 <small>80%</small></td><td>94 <small>7%</small></td><td>643 <small>48%</small></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-text">
+      <p data-i18n="foot.p">Scam2Prompt is a University of Toronto research artifact for auditing malicious scam endpoints in production LLMs.</p>
+      <p class="footer-contact"><span data-i18n="foot.contact">Contact:</span> <a href="mailto:zhiychen@cs.toronto.edu">zhiychen@cs.toronto.edu</a></p>
+    </div>
+    <a href="#top" data-i18n="foot.top">Back to top</a>
+  </footer>
+  <script src="i18n.js"></script>
+</body>
+</html>

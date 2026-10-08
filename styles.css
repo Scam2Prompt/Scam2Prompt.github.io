@@ -1009,6 +1009,49 @@ code {
   color: var(--ink);
 }
 
+.completion-table th,
+.completion-table td {
+  padding: 12px 14px;
+}
+
+.completion-table .group-row th {
+  border-bottom-color: #cfded6;
+}
+
+.completion-table th[colspan] {
+  text-align: center;
+}
+
+.completion-table .group-start {
+  border-left: 2px solid #cfded6;
+}
+
+.completion-table td:last-child {
+  font-weight: inherit;
+  color: inherit;
+}
+
+.completion-table.budget-table td {
+  width: auto;
+  color: inherit;
+  font-weight: inherit;
+}
+
+.completion-table.budget-table td[rowspan] {
+  color: var(--ink);
+  font-weight: 760;
+  vertical-align: top;
+}
+
+.budget-table tr.group-first td {
+  border-top: 2px solid #cfded6;
+}
+
+.completion-table td.mal-total {
+  font-weight: 800;
+  color: var(--accent-2);
+}
+
 .table-note {
   margin: 12px 0 0;
   color: var(--muted);
