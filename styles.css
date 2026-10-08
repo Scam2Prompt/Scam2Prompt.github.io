@@ -1037,3 +1037,7 @@ html[lang="zh-CN"] .eyebrow,
 html[lang="zh-CN"] th {
   letter-spacing: 0.04em;
 }
+
+.tier-card p + ol {
+  margin-top: 12px;
+}

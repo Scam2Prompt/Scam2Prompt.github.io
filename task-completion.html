@@ -66,10 +66,11 @@
         <article class="tier-card">
           <span data-i18n="tc.def.span">Verdicts</span>
           <h4 data-i18n="tc.def.h4">Three outcomes</h4>
+          <p data-i18n="tc.def.lead">The judge assumes every URL, API and SDK in the code exists and works. It checks only whether the code does what the prompt asks, not whether the endpoint is safe.</p>
           <ol>
-            <li data-i18n="tc.def.c"><strong>Complete:</strong> the code does the task.</li>
-            <li data-i18n="tc.def.p"><strong>Partial:</strong> a main part is missing, stubbed or broken.</li>
-            <li data-i18n="tc.def.i"><strong>Incomplete:</strong> cut off, refused, off-task or empty.</li>
+            <li data-i18n="tc.def.c"><strong>Complete:</strong> after the user adds normal configuration such as API keys, the code does everything the prompt asks. Minor style issues or extra features do not matter.</li>
+            <li data-i18n="tc.def.p"><strong>Partial:</strong> the code targets the request, but a main part is missing, replaced by a placeholder (TODO, mock or hard-coded data), or broken by a bug that stops it from working.</li>
+            <li data-i18n="tc.def.i"><strong>Incomplete:</strong> the code cannot do the task: the output is cut off before the program is finished, refuses, gives only prose, solves a different task, or is empty.</li>
           </ol>
         </article>
       </div>
