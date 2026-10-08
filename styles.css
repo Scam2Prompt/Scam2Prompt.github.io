@@ -971,3 +971,34 @@ code {
     flex-direction: column;
   }
 }
+
+/* Task-completion page */
+.nav-links a[aria-current="page"] {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.completion-table td small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.completion-table td:first-child {
+  width: 56px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.completion-table td:nth-child(2) {
+  font-weight: 760;
+  color: var(--ink);
+}
+
+.table-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
