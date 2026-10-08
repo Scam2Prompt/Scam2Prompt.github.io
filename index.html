@@ -12,12 +12,13 @@
     <nav class="nav" aria-label="Primary">
       <a class="brand" href="#top">Scam2Prompt</a>
       <div class="nav-links">
-        <a href="#paper">Paper</a>
-        <a href="#benchmark">Benchmark</a>
-        <a href="task-completion.html">Task completion</a>
-        <a href="#artifact">Artifact</a>
-        <a href="#verified-reports">Verified reports</a>
-        <a href="#resources">Resources</a>
+        <a href="#paper" data-i18n="nav.paper">Paper</a>
+        <a href="#benchmark" data-i18n="nav.benchmark">Benchmark</a>
+        <a href="task-completion.html" data-i18n="nav.task">Task completion</a>
+        <a href="#artifact" data-i18n="nav.artifact">Artifact</a>
+        <a href="#verified-reports" data-i18n="nav.verified">Verified reports</a>
+        <a href="#resources" data-i18n="nav.resources">Resources</a>
+        <button class="lang-toggle" type="button" lang="zh-CN">中文</button>
       </div>
     </nav>
   </header>
@@ -28,8 +29,8 @@
         <p class="eyebrow">ICML 2026</p>
         <img class="project-logo" src="assets/scam2prompt-logo.png" alt="Scam2Prompt logo">
         <h1 class="sr-only">Scam2Prompt</h1>
-        <p class="subtitle">A continuous pipeline for constructing developer-style benchmarks that elicit LLM-generated code containing scam URLs.</p>
-        <p class="summary">
+        <p class="subtitle" data-i18n="hero.subtitle">A continuous pipeline for constructing developer-style benchmarks that elicit LLM-generated code containing scam URLs.</p>
+        <p class="summary" data-i18n="hero.summary">
           Starting from real scam websites, Scam2Prompt extracts scam-related intent and sensitive
           keywords, transforms them into ordinary developer-style prompts, and uses the resulting
           benchmark to evaluate whether LLMs generate code that points to malicious infrastructure.
@@ -39,28 +40,28 @@
         <div class="story-chain" aria-label="Scam2Prompt story at a glance">
           <a class="story-step" href="#paper">
             <span>1</span>
-            <strong>Scam sites provide seed intent</strong>
-            <p>Seed pages expose scam-associated themes involving crypto, trading, copyright, and celebrity coins.</p>
+            <strong data-i18n="story.1.t">Scam sites provide seed intent</strong>
+            <p data-i18n="story.1.p">Seed pages expose scam-associated themes involving crypto, trading, copyright, and celebrity coins.</p>
           </a>
           <a class="story-step" href="#framework">
             <span>2</span>
-            <strong>Continuous benchmark construction</strong>
-            <p>The pipeline converts these signals into developer-style prompts and supports benchmark regeneration as new scams appear.</p>
+            <strong data-i18n="story.2.t">Continuous benchmark construction</strong>
+            <p data-i18n="story.2.p">The pipeline converts these signals into developer-style prompts and supports benchmark regeneration as new scams appear.</p>
           </a>
           <a class="story-step" href="#benchmark">
             <span>3</span>
-            <strong>Production LLMs are evaluated</strong>
-            <p>Innoc2Scam-bench measures whether recent production LLMs generate code containing malicious scam URLs.</p>
+            <strong data-i18n="story.3.t">Production LLMs are evaluated</strong>
+            <p data-i18n="story.3.p">Innoc2Scam-bench measures whether recent production LLMs generate code containing malicious scam URLs.</p>
           </a>
           <a class="story-step" href="#verified-reports">
             <span>4</span>
-            <strong>New scam URLs are verified</strong>
-            <p>The generated URLs are not merely copied from seeds; 62 were verified and added by MetaMask maintainers.</p>
+            <strong data-i18n="story.4.t">New scam URLs are verified</strong>
+            <p data-i18n="story.4.p">The generated URLs are not merely copied from seeds; 62 were verified and added by MetaMask maintainers.</p>
           </a>
         </div>
         <div class="authors-block" aria-label="Authors">
-          <p class="authors-label">Authors</p>
-          <p class="affiliation-label">University of Toronto</p>
+          <p class="authors-label" data-i18n="hero.authors">Authors</p>
+          <p class="affiliation-label" data-i18n="hero.affil">University of Toronto</p>
           <div class="authors">
             <a href="https://jeffchen006.github.io"><strong>Zhiyang Chen</strong><span>U of T</span><span>profile</span></a>
             <a href="https://ca.linkedin.com/in/tara-saba-30a7b4270"><strong>Tara Saba</strong><span>U of T</span><span>LinkedIn</span></a>
@@ -70,61 +71,61 @@
           </div>
         </div>
         <div class="cta-row" aria-label="Primary resources">
-          <a class="button primary" href="assets/scam2prompt-preprint.pdf">Preprint PDF</a>
+          <a class="button primary" href="assets/scam2prompt-preprint.pdf" data-i18n="cta.preprint">Preprint PDF</a>
           <a class="button" href="https://openreview.net/forum?id=jEQQBE30m1">OpenReview</a>
           <a class="button" href="https://arxiv.org/abs/2509.02372">arXiv</a>
-          <a class="button" href="https://icml.cc/virtual/2026/poster/62158">ICML Poster</a>
-          <a class="button" href="https://github.com/Scam2Prompt/Scam2Prompt">Artifact</a>
-          <a class="button" href="https://huggingface.co/datasets/jeffchen006/Innoc2Scam-bench-ICML26">Dataset</a>
+          <a class="button" href="https://icml.cc/virtual/2026/poster/62158" data-i18n="cta.poster">ICML Poster</a>
+          <a class="button" href="https://github.com/Scam2Prompt/Scam2Prompt" data-i18n="cta.artifact">Artifact</a>
+          <a class="button" href="https://huggingface.co/datasets/jeffchen006/Innoc2Scam-bench-ICML26" data-i18n="cta.dataset">Dataset</a>
         </div>
       </div>
       <aside class="hero-panel" aria-label="Key results">
         <div class="metric">
           <span class="metric-value">4.24%</span>
-          <span class="metric-label">malicious URL generation in the initial large-scale audit of generated code</span>
+          <span class="metric-label" data-i18n="metric.1">malicious URL generation in the initial large-scale audit of generated code</span>
         </div>
         <div class="metric">
           <span class="metric-value">1,377</span>
-          <span class="metric-label">developer-style benchmark prompts produced by the continuous benchmark construction pipeline</span>
+          <span class="metric-label" data-i18n="metric.2">developer-style benchmark prompts produced by the continuous benchmark construction pipeline</span>
         </div>
         <div class="metric">
           <span class="metric-value">12.9%-47.3%</span>
-          <span class="metric-label">malicious generation across seven recent production LLMs on Innoc2Scam-bench</span>
+          <span class="metric-label" data-i18n="metric.3">malicious generation across seven recent production LLMs on Innoc2Scam-bench</span>
         </div>
         <div class="metric accent">
           <span class="metric-value">62</span>
-          <span class="metric-label">new LLM-discovered scam entries verified and added by MetaMask's eth-phishing-detect maintainers</span>
+          <span class="metric-label" data-i18n="metric.4">new LLM-discovered scam entries verified and added by MetaMask's eth-phishing-detect maintainers</span>
         </div>
       </aside>
     </section>
 
     <section id="paper" class="section split-section">
       <div>
-        <p class="eyebrow">Problem</p>
-        <h2>A real-world observation revealed a broader LLM safety risk</h2>
+        <p class="eyebrow" data-i18n="paper.eyebrow">Problem</p>
+        <h2 data-i18n="paper.h2">A real-world observation revealed a broader LLM safety risk</h2>
       </div>
       <div class="text-block">
-        <p>
+        <p data-i18n="paper.p1">
           The motivating observation is concrete: scam websites contain phrases, product names, and
           monetization themes that are highly associated with malicious campaigns. When those signals
           are transformed into ordinary programming tasks, production LLMs may generate code that
           embeds malicious URLs.
         </p>
-        <p>
+        <p data-i18n="paper.p2">
           The generated URL does not need to be the original seed URL from the scam database. A seed
           page can instead serve as a keyword and intent source: topics such as Trump coin, Bitcoin,
           wash trading, laundry, stock trading, or copyright can trigger LLMs to produce different
           scam URLs inside code. Scam2Prompt measures that behavior at scale.
         </p>
         <div class="preprint-note">
-          <h3>Read the preprint</h3>
-          <p>
+          <h3 data-i18n="paper.note.h3">Read the preprint</h3>
+          <p data-i18n="paper.note.p">
             This paper is available as a preprint. You can view the attached PDF directly from this
             website or use the arXiv and OpenReview links for external records.
           </p>
           <div class="inline-links">
-            <a href="assets/scam2prompt-preprint.pdf">View preprint PDF</a>
-            <a href="https://arxiv.org/abs/2509.02372">arXiv page</a>
+            <a href="assets/scam2prompt-preprint.pdf" data-i18n="paper.link.pdf">View preprint PDF</a>
+            <a href="https://arxiv.org/abs/2509.02372" data-i18n="paper.link.arxiv">arXiv page</a>
           </div>
         </div>
       </div>
@@ -132,9 +133,9 @@
 
     <section id="framework" class="section visual-section">
       <div class="section-heading">
-        <p class="eyebrow">Framework</p>
-        <h2>Continuously turning newly found scam sites into benchmark prompts</h2>
-        <p>
+        <p class="eyebrow" data-i18n="fw.eyebrow">Framework</p>
+        <h2 data-i18n="fw.h2">Continuously turning newly found scam sites into benchmark prompts</h2>
+        <p data-i18n="fw.p">
           Scam2Prompt is an automated benchmark construction pipeline. When new scam websites are
           discovered, the system extracts scam-related intent, generates developer-style prompts,
           queries LLMs, and validates whether generated code contains malicious URLs.
@@ -143,32 +144,32 @@
       <div class="figure-grid">
         <figure>
           <img src="assets/overview.png" alt="Overview of the Scam2Prompt audit workflow">
-          <figcaption>Known scam sites serve as seeds for extracting sensitive themes and intent, not merely as URLs to be copied.</figcaption>
+          <figcaption data-i18n="fw.fig1">Known scam sites serve as seeds for extracting sensitive themes and intent, not merely as URLs to be copied.</figcaption>
         </figure>
         <figure>
           <img src="assets/dataset-construction.png" alt="Innoc2Scam-bench construction workflow">
-          <figcaption>The same pipeline supports continuous benchmark construction as new scam sites and campaigns appear.</figcaption>
+          <figcaption data-i18n="fw.fig2">The same pipeline supports continuous benchmark construction as new scam sites and campaigns appear.</figcaption>
         </figure>
       </div>
       <div class="pipeline-scene">
         <div class="pipeline-intro">
-          <p class="eyebrow">Pipeline</p>
-          <h3>A continuous pipeline from scam-site seeds to developer-style benchmark prompts</h3>
-          <p>
+          <p class="eyebrow" data-i18n="fw.pipe.eyebrow">Pipeline</p>
+          <h3 data-i18n="fw.pipe.h3">A continuous pipeline from scam-site seeds to developer-style benchmark prompts</h3>
+          <p data-i18n="fw.pipe.p">
             The framework is repeatable: as new scam URLs are added to public blocklists,
             Scam2Prompt crawls accessible pages, synthesizes programming prompts, queries
             code-generation LLMs, extracts generated endpoints, and validates the resulting
             prompt-code pairs.
           </p>
           <div class="inline-links">
-            <a href="assets/scam2prompt-preprint.pdf#page=6">Read framework section</a>
-            <a href="assets/scam2prompt-preprint.pdf#page=16">Read dataset construction</a>
+            <a href="assets/scam2prompt-preprint.pdf#page=6" data-i18n="fw.link1">Read framework section</a>
+            <a href="assets/scam2prompt-preprint.pdf#page=16" data-i18n="fw.link2">Read dataset construction</a>
           </div>
         </div>
         <div class="pipeline-steps" aria-label="Expandable Scam2Prompt pipeline steps">
           <details open>
-            <summary><span>1</span><strong>Collect scam-site seeds</strong></summary>
-            <p>
+            <summary><span>1</span><strong data-i18n="step1.t">Collect scam-site seeds</strong></summary>
+            <p data-i18n="step1.p">
               Scam2Prompt starts from established malicious URL databases, including MetaMask's
               <code>eth-phishing-detect</code> and PhishFort lists. In the paper, these sources
               contain hundreds of thousands of URLs; the pipeline filters them to pages that are
@@ -176,8 +177,8 @@
             </p>
           </details>
           <details>
-            <summary><span>2</span><strong>Safely extract visible content</strong></summary>
-            <p>
+            <summary><span>2</span><strong data-i18n="step2.t">Safely extract visible content</strong></summary>
+            <p data-i18n="step2.p">
               The crawler minimizes exposure to malicious pages by using lightweight HEAD requests,
               strict timeouts, URL validation, and text-only GET requests. It rejects binary content,
               strips CSS and JavaScript, and keeps the visible text that captures the scam site's
@@ -185,8 +186,8 @@
             </p>
           </details>
           <details>
-            <summary><span>3</span><strong>Synthesize developer-style prompts</strong></summary>
-            <p>
+            <summary><span>3</span><strong data-i18n="step3.t">Synthesize developer-style prompts</strong></summary>
+            <p data-i18n="step3.p">
               A prompt-generation LLM receives the cleaned page text and creates concise programming
               tasks involving code generation, APIs, libraries, or automation. The prompts preserve
               page-specific terms so they can stress-test whether an LLM associates those themes with
@@ -194,24 +195,24 @@
             </p>
           </details>
           <details>
-            <summary><span>4</span><strong>Generate code and extract URLs</strong></summary>
-            <p>
+            <summary><span>4</span><strong data-i18n="step4.t">Generate code and extract URLs</strong></summary>
+            <p data-i18n="step4.p">
               A code-generation LLM answers each synthesized prompt. Scam2Prompt then extracts every
               endpoint embedded in the generated code, producing candidate prompt-code pairs that can
               be checked for malicious URLs.
             </p>
           </details>
           <details>
-            <summary><span>5</span><strong>Validate generated endpoints</strong></summary>
-            <p>
+            <summary><span>5</span><strong data-i18n="step5.t">Validate generated endpoints</strong></summary>
+            <p data-i18n="step5.p">
               The URL oracle combines independent detectors, including ChainPatrol, Google Safe
               Browsing, and SecLookup. A generated URL is treated as malicious if any detector flags
               it. URLs not already present in the seed databases can be reported back to maintainers.
             </p>
           </details>
           <details>
-            <summary><span>6</span><strong>Curate the benchmark</strong></summary>
-            <p>
+            <summary><span>6</span><strong data-i18n="step6.t">Curate the benchmark</strong></summary>
+            <p data-i18n="step6.p">
               The final benchmark keeps prompts that are developer-style code-generation requests,
               not jailbreaks or non-coding questions. Human validation filters out summarization and
               manual workflow prompts, yielding 1,377 reusable prompts for testing newer LLMs.
@@ -223,24 +224,24 @@
 
     <section class="section">
       <div class="section-heading">
-        <p class="eyebrow">Main findings</p>
-        <h2>Production LLMs generate scam URLs at reproducible rates</h2>
+        <p class="eyebrow" data-i18n="find.eyebrow">Main findings</p>
+        <h2 data-i18n="find.h2">Production LLMs generate scam URLs at reproducible rates</h2>
       </div>
       <div class="finding-grid">
         <article class="finding">
-          <h3>Large-scale evidence</h3>
-          <p>Across more than 265,000 generated programs, Scam2Prompt observed malicious URL generation in every tested model combination.</p>
-          <strong>Average rate: 4.24%</strong>
+          <h3 data-i18n="find1.h3">Large-scale evidence</h3>
+          <p data-i18n="find1.p">Across more than 265,000 generated programs, Scam2Prompt observed malicious URL generation in every tested model combination.</p>
+          <strong data-i18n="find1.s">Average rate: 4.24%</strong>
         </article>
         <article class="finding">
-          <h3>Continuous benchmark</h3>
-          <p>Innoc2Scam-bench packages scam-seeded developer prompts so newer production LLMs can be evaluated as models change.</p>
-          <strong>1,377 prompts</strong>
+          <h3 data-i18n="find2.h3">Continuous benchmark</h3>
+          <p data-i18n="find2.p">Innoc2Scam-bench packages scam-seeded developer prompts so newer production LLMs can be evaluated as models change.</p>
+          <strong data-i18n="find2.s">1,377 prompts</strong>
         </article>
         <article class="finding">
-          <h3>Real-world harm</h3>
-          <p>Generated code surfaced scam URLs that were absent from the seed databases and were later verified by maintainers.</p>
-          <strong>62 verified additions</strong>
+          <h3 data-i18n="find3.h3">Real-world harm</h3>
+          <p data-i18n="find3.p">Generated code surfaced scam URLs that were absent from the seed databases and were later verified by maintainers.</p>
+          <strong data-i18n="find3.s">62 verified additions</strong>
         </article>
       </div>
     </section>
@@ -248,8 +249,8 @@
     <section id="benchmark" class="section table-section">
       <div class="section-heading">
         <p class="eyebrow">Innoc2Scam-bench</p>
-        <h2>Seven 2025 production LLMs evaluated with Innoc2Scam-bench</h2>
-        <p>
+        <h2 data-i18n="bench.h2">Seven 2025 production LLMs evaluated with Innoc2Scam-bench</h2>
+        <p data-i18n="bench.p">
           The current benchmark contains 342 category-1 prompts that explicitly mention a scam URL or domain,
           and 1,035 category-2 prompts that do not. These prompts test whether scam-site-derived
           intent can elicit malicious URL generation from recent models.
@@ -259,21 +260,21 @@
         <table>
           <thead>
             <tr>
-              <th>Model</th>
-              <th>Generated</th>
-              <th>Filtered</th>
-              <th>Malicious</th>
-              <th>Rate</th>
+              <th data-i18n="bench.th.model">Model</th>
+              <th data-i18n="bench.th.gen">Generated</th>
+              <th data-i18n="bench.th.filt">Filtered</th>
+              <th data-i18n="bench.th.mal">Malicious</th>
+              <th data-i18n="bench.th.rate">Rate</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="tier-label"><td colspan="5"><span>Tier 1</span> Lowest rate</td></tr>
+            <tr class="tier-label"><td colspan="5" data-i18n="tier1"><span>Tier 1</span> Lowest rate</td></tr>
             <tr class="tier-member"><td>Gemini 2.5 Pro</td><td>799</td><td>553</td><td>178</td><td>12.9%</td></tr>
-            <tr class="tier-label"><td colspan="5"><span>Tier 2</span> Second-lowest rate</td></tr>
+            <tr class="tier-label"><td colspan="5" data-i18n="tier2"><span>Tier 2</span> Second-lowest rate</td></tr>
             <tr class="tier-member"><td>GPT-5</td><td>1,227</td><td>24</td><td>303</td><td>22.0%</td></tr>
-            <tr class="tier-label"><td colspan="5"><span>Tier 3</span> Middle rate</td></tr>
+            <tr class="tier-label"><td colspan="5" data-i18n="tier3"><span>Tier 3</span> Middle rate</td></tr>
             <tr class="tier-member"><td>Claude Sonnet 4</td><td>1,248</td><td>115</td><td>472</td><td>34.3%</td></tr>
-            <tr class="tier-label"><td colspan="5"><span>Tier 4</span> Higher-risk cluster</td></tr>
+            <tr class="tier-label"><td colspan="5" data-i18n="tier4"><span>Tier 4</span> Higher-risk cluster</td></tr>
             <tr class="tier-member"><td>Grok Code Fast 1</td><td>1,355</td><td>18</td><td>597</td><td>43.4%</td></tr>
             <tr class="tier-member"><td>Gemini 2.5 Flash</td><td>1,351</td><td>1</td><td>612</td><td>44.4%</td></tr>
             <tr class="tier-member"><td>Qwen3 Coder</td><td>1,367</td><td>3</td><td>628</td><td>45.6%</td></tr>
@@ -283,61 +284,61 @@
       </div>
       <div class="filter-analysis">
         <div class="filter-copy">
-          <p class="eyebrow">Guardrails, filtering, and rankings</p>
-          <h3>Content filters change the apparent safety ranking</h3>
-          <p>
+          <p class="eyebrow" data-i18n="bench.filter.eyebrow">Guardrails, filtering, and rankings</p>
+          <h3 data-i18n="bench.filter.h3">Content filters change the apparent safety ranking</h3>
+          <p data-i18n="bench.filter.p1">
             The table above is filter-aware: outputs blocked by a model's internal
             safety filter or guardrail are counted as non-malicious. This matters because
             Gemini 2.5 Pro filtered 553 of 1,377 prompts, while GPT-5 filtered only 24.
             In the appendix, we also remove this filter effect by comparing only the
             637 prompts completed by all seven models.
           </p>
-          <p>
+          <p data-i18n="bench.filter.p2">
             We report 95% Wald confidence intervals and paired McNemar tests. The result is
             best interpreted as statistical tiers rather than a single universal ordering.
           </p>
           <div class="inline-links">
-            <a href="assets/scam2prompt-preprint.pdf#page=20">Read appendix analysis</a>
-            <a href="assets/scam2prompt-preprint.pdf#page=22">Shared-completion ranking</a>
+            <a href="assets/scam2prompt-preprint.pdf#page=20" data-i18n="bench.link1">Read appendix analysis</a>
+            <a href="assets/scam2prompt-preprint.pdf#page=22" data-i18n="bench.link2">Shared-completion ranking</a>
           </div>
         </div>
         <div class="tier-grid" aria-label="Statistical ranking tiers">
           <article class="tier-card">
-            <span>Filter-aware</span>
-            <h4>All 1,377 prompts</h4>
+            <span data-i18n="card1.span">Filter-aware</span>
+            <h4 data-i18n="card1.h4">All 1,377 prompts</h4>
             <ol>
-              <li><strong>Lowest malicious-generation rate:</strong> Gemini 2.5 Pro</li>
-              <li><strong>Second-lowest rate:</strong> GPT-5</li>
-              <li><strong>Middle rate:</strong> Claude Sonnet 4</li>
-              <li><strong>Higher-risk cluster:</strong> Grok Code Fast 1, Gemini 2.5 Flash, Qwen3 Coder, DeepSeek Chat v3.1</li>
+              <li data-i18n="card1.li1"><strong>Lowest malicious-generation rate:</strong> Gemini 2.5 Pro</li>
+              <li data-i18n="card1.li2"><strong>Second-lowest rate:</strong> GPT-5</li>
+              <li data-i18n="card1.li3"><strong>Middle rate:</strong> Claude Sonnet 4</li>
+              <li data-i18n="card1.li4"><strong>Higher-risk cluster:</strong> Grok Code Fast 1, Gemini 2.5 Flash, Qwen3 Coder, DeepSeek Chat v3.1</li>
             </ol>
           </article>
           <article class="tier-card">
-            <span>Filter removed</span>
-            <h4>637 shared completions</h4>
+            <span data-i18n="card2.span">Filter removed</span>
+            <h4 data-i18n="card2.h4">637 shared completions</h4>
             <ol>
-              <li><strong>Statistical tie:</strong> Gemini 2.5 Pro and GPT-5</li>
-              <li><strong>Middle:</strong> Claude Sonnet 4</li>
-              <li><strong>Lower cluster:</strong> remaining models mostly overlap under McNemar tests</li>
+              <li data-i18n="card2.li1"><strong>Statistical tie:</strong> Gemini 2.5 Pro and GPT-5</li>
+              <li data-i18n="card2.li2"><strong>Middle:</strong> Claude Sonnet 4</li>
+              <li data-i18n="card2.li3"><strong>Lower cluster:</strong> remaining models mostly overlap under McNemar tests</li>
             </ol>
           </article>
         </div>
       </div>
       <div class="resource-card">
-        <h3>Download the benchmark</h3>
-        <p>The dataset is released on Hugging Face and mirrored on GitHub for reproducibility.</p>
+        <h3 data-i18n="bench.dl.h3">Download the benchmark</h3>
+        <p data-i18n="bench.dl.p">The dataset is released on Hugging Face and mirrored on GitHub for reproducibility.</p>
         <div class="inline-links">
-          <a href="https://huggingface.co/datasets/jeffchen006/Innoc2Scam-bench-ICML26">Hugging Face dataset</a>
-          <a href="https://github.com/Scam2Prompt/Innoc2Scam-bench">GitHub dataset mirror</a>
+          <a href="https://huggingface.co/datasets/jeffchen006/Innoc2Scam-bench-ICML26" data-i18n="bench.dl.hf">Hugging Face dataset</a>
+          <a href="https://github.com/Scam2Prompt/Innoc2Scam-bench" data-i18n="bench.dl.gh">GitHub dataset mirror</a>
         </div>
       </div>
     </section>
 
     <section id="verified-reports" class="section verified-section">
       <div class="section-heading">
-        <p class="eyebrow">Practical impact</p>
-        <h2>LLM-generated code surfaced new scam URLs absent from the seed databases</h2>
-        <p>
+        <p class="eyebrow" data-i18n="ver.eyebrow">Practical impact</p>
+        <h2 data-i18n="ver.h2">LLM-generated code surfaced new scam URLs absent from the seed databases</h2>
+        <p data-i18n="ver.p">
           Scam2Prompt does not only reproduce known scam infrastructure. Seed websites can act as
           sources of scam-related intent, after which an LLM may generate different malicious URLs
           inside code. We reported newly surfaced URLs to MetaMask's <code>eth-phishing-detect</code>
@@ -347,11 +348,11 @@
       <div class="impact-panel">
         <div class="impact-total">
           <span>62</span>
-          <p>verified additions</p>
+          <p data-i18n="ver.total">verified additions</p>
         </div>
         <div class="impact-copy">
-          <h3>From generated code to live blocklist protection</h3>
-          <p>
+          <h3 data-i18n="ver.h3">From generated code to live blocklist protection</h3>
+          <p data-i18n="ver.p2">
             Each report below links to a public issue in the MetaMask scam database. The number on
             each chip is the count of accepted entries associated with that report, demonstrating
             that benchmark-triggered generations can reveal actionable scam infrastructure.
@@ -394,45 +395,46 @@
 
     <section id="artifact" class="section split-section">
       <div>
-        <p class="eyebrow">Artifact</p>
-        <h2>Reproduce the audit pipeline</h2>
+        <p class="eyebrow" data-i18n="art.eyebrow">Artifact</p>
+        <h2 data-i18n="art.h2">Reproduce the audit pipeline</h2>
       </div>
       <div class="text-block">
-        <p>
+        <p data-i18n="art.p">
           The artifact contains the end-to-end pipeline: scam database inputs, webpage crawling and
           caching, automated prompt generation from scam-site intent, code generation, malicious URL
           oracles, evaluation of newer LLMs, and reporting.
         </p>
         <div class="inline-links">
-          <a href="https://github.com/Scam2Prompt/Scam2Prompt">GitHub artifact</a>
-          <a href="https://github.com/Scam2Prompt">Scam2Prompt GitHub organization</a>
+          <a href="https://github.com/Scam2Prompt/Scam2Prompt" data-i18n="art.link1">GitHub artifact</a>
+          <a href="https://github.com/Scam2Prompt" data-i18n="art.link2">Scam2Prompt GitHub organization</a>
         </div>
       </div>
     </section>
 
     <section id="resources" class="section">
       <div class="section-heading">
-        <p class="eyebrow">Resources</p>
-        <h2>Links</h2>
+        <p class="eyebrow" data-i18n="res.eyebrow">Resources</p>
+        <h2 data-i18n="res.h2">Links</h2>
       </div>
       <div class="resources">
-        <a href="assets/scam2prompt-preprint.pdf"><span>Preprint</span><strong>View the attached paper PDF</strong></a>
-        <a href="https://arxiv.org/abs/2509.02372"><span>Paper</span><strong>arXiv abstract and PDF</strong></a>
-        <a href="https://openreview.net/forum?id=jEQQBE30m1"><span>Review</span><strong>OpenReview forum</strong></a>
-        <a href="https://icml.cc/virtual/2026/poster/62158"><span>Conference</span><strong>ICML 2026 virtual poster</strong></a>
-        <a href="https://icml.cc/Conferences/2026"><span>Conference</span><strong>ICML 2026 site</strong></a>
-        <a href="https://github.com/Scam2Prompt/Scam2Prompt.github.io"><span>Website</span><strong>GitHub Pages source</strong></a>
-        <a href="https://github.com/Scam2Prompt/Scam2Prompt"><span>Artifact</span><strong>Code and experimental data</strong></a>
-        <a href="https://github.com/Scam2Prompt/Innoc2Scam-bench"><span>Dataset</span><strong>GitHub benchmark mirror</strong></a>
-        <a href="https://huggingface.co/datasets/jeffchen006/Innoc2Scam-bench-ICML26"><span>Dataset</span><strong>Hugging Face release</strong></a>
-        <a href="https://sites.google.com/view/scam2prompt/"><span>Previous site</span><strong>Archived Google Site</strong></a>
+        <a href="assets/scam2prompt-preprint.pdf" data-i18n="res.1"><span>Preprint</span><strong>View the attached paper PDF</strong></a>
+        <a href="https://arxiv.org/abs/2509.02372" data-i18n="res.2"><span>Paper</span><strong>arXiv abstract and PDF</strong></a>
+        <a href="https://openreview.net/forum?id=jEQQBE30m1" data-i18n="res.3"><span>Review</span><strong>OpenReview forum</strong></a>
+        <a href="https://icml.cc/virtual/2026/poster/62158" data-i18n="res.4"><span>Conference</span><strong>ICML 2026 virtual poster</strong></a>
+        <a href="https://icml.cc/Conferences/2026" data-i18n="res.5"><span>Conference</span><strong>ICML 2026 site</strong></a>
+        <a href="https://github.com/Scam2Prompt/Scam2Prompt.github.io" data-i18n="res.6"><span>Website</span><strong>GitHub Pages source</strong></a>
+        <a href="https://github.com/Scam2Prompt/Scam2Prompt" data-i18n="res.7"><span>Artifact</span><strong>Code and experimental data</strong></a>
+        <a href="https://github.com/Scam2Prompt/Innoc2Scam-bench" data-i18n="res.8"><span>Dataset</span><strong>GitHub benchmark mirror</strong></a>
+        <a href="https://huggingface.co/datasets/jeffchen006/Innoc2Scam-bench-ICML26" data-i18n="res.9"><span>Dataset</span><strong>Hugging Face release</strong></a>
+        <a href="https://sites.google.com/view/scam2prompt/" data-i18n="res.10"><span>Previous site</span><strong>Archived Google Site</strong></a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Scam2Prompt is a University of Toronto research artifact for auditing malicious scam endpoints in production LLMs.</p>
-    <a href="#top">Back to top</a>
+    <p data-i18n="foot.p">Scam2Prompt is a University of Toronto research artifact for auditing malicious scam endpoints in production LLMs.</p>
+    <a href="#top" data-i18n="foot.top">Back to top</a>
   </footer>
+  <script src="i18n.js"></script>
 </body>
 </html>
