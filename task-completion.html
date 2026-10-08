@@ -75,12 +75,43 @@
         </article>
       </div>
     </section>
+
+    <section id="examples" class="section examples-section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="ex.eyebrow">Examples</p>
+        <h2 data-i18n="ex.h2">Sample outputs and judge verdicts</h2>
+        <p data-i18n="ex.intro">102 outputs: 1–5 per model, URL type and verdict, sampled in proportion to the counts above. Scam addresses are defanged, for example <code>hxxps://scam[.]com</code>. Do not run this code.</p>
+      </div>
+      <div class="example-filters">
+        <label><span data-i18n="ex.f.model">Model</span>
+          <select id="exModel"><option value="" data-i18n="ex.f.all">All</option></select></label>
+        <label><span data-i18n="ex.f.url">URL</span>
+          <select id="exMal">
+            <option value="" data-i18n="ex.f.all">All</option>
+            <option value="1" data-i18n="ex.mal">Malicious</option>
+            <option value="0" data-i18n="ex.ben">Benign</option>
+          </select></label>
+        <label><span data-i18n="ex.f.verdict">Verdict</span>
+          <select id="exVerdict">
+            <option value="" data-i18n="ex.f.all">All</option>
+            <option value="complete" data-i18n="ex.v.complete">Complete</option>
+            <option value="partial" data-i18n="ex.v.partial">Partial</option>
+            <option value="incomplete" data-i18n="ex.v.incomplete">Incomplete</option>
+          </select></label>
+        <span id="exCount" class="example-count"></span>
+      </div>
+      <div id="exList" class="example-list"><p class="table-note" data-i18n="ex.loading">Loading examples…</p></div>
+    </section>
   </main>
 
   <footer class="footer">
-    <p data-i18n="foot.p">Scam2Prompt is a University of Toronto research artifact for auditing malicious scam endpoints in production LLMs.</p>
+    <div class="footer-text">
+      <p data-i18n="foot.p">Scam2Prompt is a University of Toronto research artifact for auditing malicious scam endpoints in production LLMs.</p>
+      <p class="footer-contact"><span data-i18n="foot.contact">Contact:</span> <a href="mailto:zhiychen@cs.toronto.edu">zhiychen@cs.toronto.edu</a></p>
+    </div>
     <a href="#top" data-i18n="foot.top">Back to top</a>
   </footer>
   <script src="i18n.js"></script>
+  <script src="task-examples.js"></script>
 </body>
 </html>
