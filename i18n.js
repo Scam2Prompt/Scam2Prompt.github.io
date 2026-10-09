@@ -2,6 +2,15 @@
 // element with a data-i18n key, and the language toggle in the navigation bar.
 (function () {
   var ZH = {
+    "nav.video": "视频",
+    "cta.video": "观看 ICML 报告 · 5:31",
+    "video.eyebrow": "ICML 2026 报告 · 5:31",
+    "video.h2": "五分钟了解 Scam2Prompt",
+    "video.p": "我们的 ICML 报告介绍了问题、审计流程和 Innoc2Scam-bench 的评估结果。",
+    "video.caption": "观看 ICML 报告 <span>5:31</span>",
+    "video.watch": "在 ICML 网站观看",
+    "video.slides": "报告幻灯片",
+    "res.video": "<span>视频</span><strong>ICML 2026 报告 · 5:31</strong>",
     "title.task": "任务完成度 · Scam2Prompt",
 
     "nav.paper": "论文",

@@ -12,6 +12,7 @@
     <nav class="nav" aria-label="Primary">
       <a class="brand" href="#top">Scam2Prompt</a>
       <div class="nav-links">
+        <a href="#video" data-i18n="nav.video">Video</a>
         <a href="#paper" data-i18n="nav.paper">Paper</a>
         <a href="#benchmark" data-i18n="nav.benchmark">Benchmark</a>
         <a href="task-completion.html" data-i18n="nav.task">Task completion</a>
@@ -30,6 +31,51 @@
         <img class="project-logo" src="assets/scam2prompt-logo.png" alt="Scam2Prompt logo">
         <h1 class="sr-only">Scam2Prompt</h1>
         <p class="subtitle" data-i18n="hero.subtitle">A continuous pipeline for constructing developer-style benchmarks that elicit LLM-generated code containing scam URLs.</p>
+      </div>
+
+      <aside id="video" class="hero-video video-section" aria-labelledby="video-heading">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="video.eyebrow">ICML 2026 presentation · 5:31</p>
+          <h2 id="video-heading" data-i18n="video.h2">Watch Scam2Prompt in five minutes</h2>
+          <p data-i18n="video.p">Our ICML presentation introduces the problem, the audit pipeline, and Innoc2Scam-bench results.</p>
+        </div>
+        <a class="presentation-preview" href="https://icml.cc/virtual/2026/poster/62158" aria-label="Watch the Scam2Prompt ICML 2026 presentation (5 minutes, 31 seconds)">
+          <img src="https://slideslive-slides.b-cdn.net/39081215/slides/original/x8IzCdkxq6r0d48a.png?class=432" alt="Title slide from the Scam2Prompt ICML 2026 presentation" width="960" height="540" fetchpriority="high">
+          <span class="presentation-play" aria-hidden="true">▶</span>
+          <span class="presentation-caption" data-i18n="video.caption">Watch the ICML presentation <span>5:31</span></span>
+        </a>
+        <div class="inline-links video-links">
+          <a href="https://icml.cc/virtual/2026/poster/62158" data-i18n="video.watch">Watch on ICML</a>
+          <a href="https://icml.cc/media/icml-2026/Slides/62158.pdf" data-i18n="video.slides">Presentation slides</a>
+        </div>
+      </aside>
+
+      <div class="hero-meta">
+        <div class="authors-block" aria-label="Authors">
+          <p class="authors-label" data-i18n="hero.authors">Authors</p>
+          <p class="affiliation-label" data-i18n="hero.affil">University of Toronto</p>
+          <div class="authors">
+            <a href="https://jeffchen006.github.io"><strong>Zhiyang Chen</strong><span>U of T</span><span>profile</span></a>
+            <a href="https://ca.linkedin.com/in/tara-saba-30a7b4270"><strong>Tara Saba</strong><span>U of T</span><span>LinkedIn</span></a>
+            <a href="https://ca.linkedin.com/in/xun-deng-5b0bb3157"><strong>Xun Deng</strong><span>U of T</span><span>LinkedIn</span></a>
+            <a href="https://www.cs.utoronto.ca/~six/"><strong>Xujie Si</strong><span>U of T</span><span>profile</span></a>
+            <a href="https://www.cs.utoronto.ca/~fanl/"><strong>Fan Long</strong><span>U of T</span><span>profile</span></a>
+          </div>
+        </div>
+        <div class="cta-row" aria-label="Primary resources">
+          <a class="button primary" href="#video" data-i18n="cta.video">Watch the ICML talk · 5:31</a>
+          <a class="button primary" href="assets/scam2prompt-preprint.pdf" data-i18n="cta.preprint">Preprint PDF</a>
+          <a class="button" href="https://openreview.net/forum?id=jEQQBE30m1">OpenReview</a>
+          <a class="button" href="https://arxiv.org/abs/2509.02372">arXiv</a>
+          <a class="button" href="https://icml.cc/virtual/2026/poster/62158" data-i18n="cta.poster">ICML Poster</a>
+          <a class="button" href="https://github.com/Scam2Prompt/Scam2Prompt" data-i18n="cta.artifact">Artifact</a>
+          <a class="button" href="https://huggingface.co/datasets/jeffchen006/Innoc2Scam-bench-ICML26" data-i18n="cta.dataset">Dataset</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro-details" aria-label="Project overview and key results">
+      <div>
         <p class="summary" data-i18n="hero.summary">
           Starting from real scam websites, Scam2Prompt extracts scam-related intent and sensitive
           keywords, transforms them into ordinary developer-style prompts, and uses the resulting
@@ -58,25 +104,6 @@
             <strong data-i18n="story.4.t">New scam URLs are verified</strong>
             <p data-i18n="story.4.p">The generated URLs are not merely copied from seeds; 62 were verified and added by MetaMask maintainers.</p>
           </a>
-        </div>
-        <div class="authors-block" aria-label="Authors">
-          <p class="authors-label" data-i18n="hero.authors">Authors</p>
-          <p class="affiliation-label" data-i18n="hero.affil">University of Toronto</p>
-          <div class="authors">
-            <a href="https://jeffchen006.github.io"><strong>Zhiyang Chen</strong><span>U of T</span><span>profile</span></a>
-            <a href="https://ca.linkedin.com/in/tara-saba-30a7b4270"><strong>Tara Saba</strong><span>U of T</span><span>LinkedIn</span></a>
-            <a href="https://ca.linkedin.com/in/xun-deng-5b0bb3157"><strong>Xun Deng</strong><span>U of T</span><span>LinkedIn</span></a>
-            <a href="https://www.cs.utoronto.ca/~six/"><strong>Xujie Si</strong><span>U of T</span><span>profile</span></a>
-            <a href="https://www.cs.utoronto.ca/~fanl/"><strong>Fan Long</strong><span>U of T</span><span>profile</span></a>
-          </div>
-        </div>
-        <div class="cta-row" aria-label="Primary resources">
-          <a class="button primary" href="assets/scam2prompt-preprint.pdf" data-i18n="cta.preprint">Preprint PDF</a>
-          <a class="button" href="https://openreview.net/forum?id=jEQQBE30m1">OpenReview</a>
-          <a class="button" href="https://arxiv.org/abs/2509.02372">arXiv</a>
-          <a class="button" href="https://icml.cc/virtual/2026/poster/62158" data-i18n="cta.poster">ICML Poster</a>
-          <a class="button" href="https://github.com/Scam2Prompt/Scam2Prompt" data-i18n="cta.artifact">Artifact</a>
-          <a class="button" href="https://huggingface.co/datasets/jeffchen006/Innoc2Scam-bench-ICML26" data-i18n="cta.dataset">Dataset</a>
         </div>
       </div>
       <aside class="hero-panel" aria-label="Key results">
@@ -417,6 +444,7 @@
         <h2 data-i18n="res.h2">Links</h2>
       </div>
       <div class="resources">
+        <a href="#video" data-i18n="res.video"><span>Video</span><strong>ICML 2026 presentation · 5:31</strong></a>
         <a href="assets/scam2prompt-preprint.pdf" data-i18n="res.1"><span>Preprint</span><strong>View the attached paper PDF</strong></a>
         <a href="https://arxiv.org/abs/2509.02372" data-i18n="res.2"><span>Paper</span><strong>arXiv abstract and PDF</strong></a>
         <a href="https://openreview.net/forum?id=jEQQBE30m1" data-i18n="res.3"><span>Review</span><strong>OpenReview forum</strong></a>

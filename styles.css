@@ -70,13 +70,31 @@ a:hover {
 
 .hero {
   max-width: 1180px;
-  min-height: 660px;
   margin: 0 auto;
-  padding: 78px 24px 60px;
+  padding: 42px 24px 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.hero-meta {
+  grid-column: 1 / -1;
+}
+
+.hero-meta .authors-block {
+  margin-top: 0;
+}
+
+.intro-details {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
   gap: 42px;
-  align-items: center;
+  align-items: start;
+}
+
+.intro-details .summary {
+  margin-top: 0;
 }
 
 .eyebrow {
@@ -117,7 +135,7 @@ h1 {
 
 .project-logo {
   display: block;
-  width: min(620px, 94vw);
+  width: min(620px, 100%);
   height: auto;
   margin: 0 0 22px;
 }
@@ -364,6 +382,84 @@ h3 {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 54px;
+}
+
+.video-section {
+  scroll-margin-top: 110px;
+}
+
+.video-section .section-heading h2 {
+  margin-bottom: 16px;
+}
+
+.hero-video h2 {
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+.hero-video .section-heading {
+  margin-bottom: 18px;
+}
+
+.hero-video .section-heading p {
+  font-size: 15px;
+}
+
+.presentation-preview {
+  position: relative;
+  display: block;
+  max-width: 960px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.presentation-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.presentation-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  padding-left: 5px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  font-size: 30px;
+  box-shadow: var(--shadow);
+}
+
+.presentation-preview:hover .presentation-play,
+.presentation-preview:focus-visible .presentation-play {
+  background: var(--ink);
+}
+
+.presentation-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--ink);
+  color: white;
+  font-weight: 700;
+}
+
+.presentation-caption span {
+  white-space: nowrap;
+  color: #7dd3c7;
+}
+
+.video-links {
+  margin-top: 20px;
 }
 
 .text-block p,
@@ -891,6 +987,7 @@ code {
   }
 
   .hero,
+  .intro-details,
   .split-section,
   .impact-panel,
   .filter-analysis,
